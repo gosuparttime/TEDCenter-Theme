@@ -1,0 +1,271 @@
+// Devin's edits
+.clear{
+    clear: both;
+}
+.brown-bar{
+    padding: .5em 0 .75em 0;
+    background-color: @brown;
+}
+.white-bg{
+    padding: 2em 1.5em;
+    background-color: @white;
+    border: 1px solid @brown;
+    min-height: 43em;
+    @media (max-width: @screen-sm-max) {
+        padding: 1em .5em;
+    }
+}
+.siteinfo{
+    #branding{
+        margin-top: -2em;
+    }
+}
+#inner-footer{
+    font-size: 82.75%;
+    margin-bottom: 2em;
+    h5, p, address{
+        margin: 0;
+        line-height: @line-height-base;
+    }
+    a{
+        color: @grayWarm;
+        text-decoration: none;
+    }
+}
+#main{
+    padding-right: 1em !important;
+    p, ul, ol, small, blockquote{
+        margin-right: 1em;
+    }
+}
+#site-description{
+    h5{
+        padding: 0;
+        margin: 0;
+    }
+    p.small{
+        line-height: 1.3em;
+    }
+}
+#quote{
+    text-align: right;
+    .quote{
+        color: @brown;
+        font-weight: 300;
+        margin-bottom: .2em;
+        font-size: @font-size-h4;
+    }
+    small{
+        font-size: @font-size-small;
+        color: darken(@orange, 10%);
+    }
+}
+.footer-seal{
+    width: 40%;
+    margin-left: 1em;
+    float: right;
+    .clearfix;
+    a{
+        display: block;
+    }
+}
+.sidebar.collapse{
+     height: auto;
+ }
+#menu-utility-navigation {
+    padding: .5em 1em 0 0;
+    margin: 0;
+    float: right;
+    list-style: none;
+    font-size: @font-size-small;
+    > li {
+        display: block;
+        float: left;
+        margin-right: .5em;
+        color: @white;
+        > a {
+            color: white;
+            display: block;
+            padding: .25em;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    > li.bull {
+        padding-top: .25em;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+div.footer-links ul {
+    float: right;
+    margin: 0;
+    padding: 0 0 .5em 0;
+    list-style-type: none;
+    > li {
+        float: left;
+        border-right: 1px solid @gray;
+        &:last-child {
+            border-right: none;
+        }
+        > a {
+            display: block;
+            text-decoration: none;
+            padding: .1em .33em;
+        }
+    }
+}
+#site-description{
+    padding-top: 1em;
+    text-align: right;
+    @media (max-width: @screen-xs-max) {
+        p{
+            font-size: 87.5%;
+        }
+        h5{
+            font-size: 91.67%;
+            font-weight: 700;
+        }
+    }
+}
+.widget{
+    font-size: 87.5%;
+    padding-bottom: 1em;
+    .btn, .btn > i{
+         font-size: 100%;
+    }
+}
+.carousel, .widget{
+    .hide-me{
+        display: none;
+    }
+}
+
+img.alignleft{
+	margin-right: 1em;
+	float: left;
+	.thumbnail();
+}
+
+img.alignright{
+	margin-left: 1em;
+	float: right;
+	.thumbnail();
+}
+
+img.aligncenter{
+	display: block;
+	margin: 0 auto;
+	.thumbnail();
+}
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.widget{
+    h4.block{
+        margin: 0;
+    }
+    img.stock{
+        margin-bottom: .5em;
+    }
+    
+}
+// Main Nav Accordions
+.main-nav{
+    .accordion-group, .menu-home{
+        position: relative;
+        color: #333333;
+        border-top: 1px solid #827b77;
+        font-size: @font-size-h5;
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: #333333;
+            padding: 0.5em;
+            display: block;
+        }
+        & a:hover, a:focus, .focused {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #827b77;
+        }
+    }
+    .accordion-menu, {
+      position: relative;
+      min-width: 160px;
+      padding: 0;
+      margin: 0; // override default ul
+      list-style: none;
+      font-size: @font-size-small;
+      // Aligns the dropdown menu to right
+      &.pull-right {
+        right: 0;
+        left: auto;
+      }
+    
+      // Dividers (basically an hr) within the dropdown
+      .divider {
+        .nav-divider(@dropdown-divider-bg);
+      }
+      > li{
+          border-bottom: 1px dashed @gray-light;
+          margin: 0;
+          &:last-child{
+              border-bottom: none;
+          }
+      }
+      // Links within the dropdown menu
+      > li > a {
+        display: block;
+        padding: .5em;
+        clear: both;
+        font-weight: normal;
+        line-height: @line-height-base;
+        color: @dropdown-link-color;
+        text-decoration: none;
+        //white-space: nowrap; // prevent links from randomly breaking onto new lines
+        @media (max-width: @screen-sm-max) {
+            padding: 1em .9em;
+        }
+      }
+    }
+    
+    // Hover/Focus state
+    .accordion-menu > li > a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @dropdown-link-hover-color;
+        background-color: @dropdown-link-hover-bg;
+      }
+    }
+    
+    // Active state
+    .accordion-menu > .active > a, .menu-home.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @dropdown-link-active-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: @dropdown-link-active-bg;
+      }
+    }
+}

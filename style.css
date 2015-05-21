@@ -1,0 +1,36 @@
+/*
+Theme Name: TEDCenter
+Theme URI: http://tedcenter.syr.edu
+Description: A custom theme for TEDCenter at Syracuse University based off the bones/Twitter Bootstrap wordpress theme.
+Version: 1.0
+Author: Devin Kerr
+Author URI: http://www.dkerrcreative.com
+Tags: bones, twitter bootstrap, 320press, clean, basic
+*/
+
+*/
+
+/* micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+.off-screen {
+height: 1px;
+width: 1px;
+overflow: hidden;
+left: -10000px;
+top: auto;
+position: absolute;
+}

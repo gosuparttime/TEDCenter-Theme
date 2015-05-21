@@ -1,0 +1,53 @@
+//@import "bootstrap.less";
+
+.tribe-events-event-meta .tribe-events-meta-group, .tribe-events-event-meta .column{
+    width: auto;
+}
+.tribe-events-event-meta:first-child {
+    border-top: none;
+}
+.tribe-events-event-url{
+    > a{
+        .btn();
+        .btn-info();
+    }
+}
+span.tribe-events-list-separator-month{
+    .h3();
+    background: transparent;
+    text-transform: none;
+    padding-left: 0;
+    margin-top: 1em;
+}
+.tribe-events-list .tribe-events-event-cost{
+    span{
+        color: @red;
+        background: transparent;
+        border: none;
+    }
+    span:before{
+        content: "Price: ";
+    }
+}
+.tribe-events-address{
+    span{
+        display: inline-block;
+        &.delimiter{
+            display: inline;
+        }
+        &.country-name{
+            display: none;
+        }
+    }
+}
+.tribe-events-venue-details.list-view{
+    a.tribe-events-gmap{
+        display: none;
+    }
+    address{
+        display: block;
+    }
+}
+.tribe-events-list .vevent.hentry{
+    padding: 1em 0;
+}

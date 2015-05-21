@@ -1,0 +1,97 @@
+// Calendar
+.gce-navbar{
+    background: @brown;
+    padding: .5em;
+    .gce-month-title{
+        .h2();
+        color: @white;
+    }
+    .gce-prev, .gce-next{
+        background: @orange;
+        .btn();
+        .btn-warning();
+        .gce-change-month{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .gce-prev{
+        position: relative;
+        padding-left: 1.75em;
+       .gce-change-month:before{
+            position:absolute;
+            font-family: FontAwesome;
+            top:.6em;
+            left:.7em;
+            content: "\f060";
+            font-size: 87.5%;
+        }
+    }
+    .gce-next{
+        position: relative;
+        padding-right: 1.75em;
+       .gce-change-month:before{
+            position:absolute;
+            font-family: FontAwesome;
+            top:.6em;
+            right:.7em;
+            content: "\f061";
+            font-size: 87.5%;
+        }
+    }
+}
+td.gce-has-events{
+    span.gce-day-number{
+        color: @orange;
+    }
+}
+.gce-list-grouped{
+    .gce-event-day{
+        border-bottom: 1px dotted @grayWarm;
+        margin-bottom: .5em;
+        &:last-child{
+            border-bottom: none;
+        }
+        .gce-list-title, .gce-tooltip-title{
+            .h5();
+            color: @gray;
+        }
+        .gce-feed{
+            margin-left: 0;
+            .gce-list-event, .gce-tooltip-event{
+                background: transparent;
+                padding: 0;
+                font-weight: bold;
+                font-weight: 700;
+            }
+        }
+    }
+}
+.gce-event-info{
+    .gce-list-title, .gce-tooltip-title{
+        .h5();
+        color: @gray;
+    }
+    li{
+        border-bottom: 1px dotted @grayWarm;
+        margin-bottom: .5em;
+        padding-bottom: .75em;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    .gce-list-event, .gce-tooltip-event{
+            background: transparent;
+            padding: 0;
+            font-weight: bold;
+            font-weight: 700;
+        }
+    .gce-feed{
+        margin-left: 0;
+        
+    }
+}
+.qtip{
+    max-width: 600px;
+    font-size: .9em;
+}
